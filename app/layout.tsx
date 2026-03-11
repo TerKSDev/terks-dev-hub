@@ -3,32 +3,50 @@ import Header from './_components/Header';
 import { Playfair_Display, Inter, Noto_Serif_JP } from 'next/font/google';
 import './globals.css';
 
-// 西式優雅襯線體
 const playfairDisplay = Playfair_Display({
    subsets: ['latin'],
    variable: '--font-playfair-display',
-   weight: ['400', '500', '600'], // 限制字重，保持輕盈感
+   weight: ['400', '500', '600'],
 });
 
-// 現代無襯線體 (適合極小的輔助文字)
 const inter = Inter({
    subsets: ['latin'],
    variable: '--font-inter',
    weight: ['300', '400', '500'],
 });
 
-// 日文專用襯線體 (東方禪意的靈魂)
 const notoSerifJP = Noto_Serif_JP({
    subsets: ['latin'],
    variable: '--font-noto-serif-jp',
-   weight: ['200', '300', '400', '500'], // 使用偏細的字重
+   weight: ['200', '300', '400', '500'],
 });
 
-// 幫你把 Metadata 更新成更有質感的作品集預設
 export const metadata: Metadata = {
-   title: 'TerKS.Dev | Creative Full-Stack Developer',
+   title: 'TerKS.Dev.Hub - Japanese-Style Full-Stack Developer Portfolio',
    description:
-      'Minimalist web development portfolio blending elegant design with robust architecture.',
+      'TerKS.Dev.Hubは、創造的なフルスタック開発者であるTerKSのポートフォリオサイトです。シンプルさと機能性を融合させたデザインで、TerKSのスキルセット、プロジェクト、そして連絡先情報を紹介しています。日本語と英語の両方に対応し、ユーザーフレンドリーなインターフェースを提供しています。',
+   keywords: [
+      'TerKS',
+      'TerKS.Dev',
+      'TerKS Portfolio',
+      'Full-Stack Developer',
+      'Web Developer',
+      'Japanese-Style Portfolio',
+   ],
+   openGraph: {
+      type: 'website',
+      locale: 'us-en',
+      url: 'https://terks-dev-hub.vercel.app',
+      siteName: 'TerKS.Dev.Hub',
+      images: [
+         {
+            url: 'https://terks-dev-hub.vercel.app/og-image.png',
+            width: 1200,
+            height: 630,
+            alt: 'TerKS.Dev.Hub OG Image',
+         },
+      ],
+   },
 };
 
 export default function RootLayout({
