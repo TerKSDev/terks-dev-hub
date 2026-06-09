@@ -12,7 +12,7 @@ const projectsData = [
     name: "Game Portal",
     system: "Digital Distribution Platform",
     description:
-      "A conceptual game storefront inspired by Steam. It reimagines complex game discovery through a clean, interactive Bento Grid UI.",
+      "A conceptual game storefront inspired by Steam. It reimagine complex game discovery through a clean, interactive Bento Grid UI. The goal is to explore how modern frontend technologies can enhance the traditional desktop application experience, making it more fluid and visually engaging for users.",
     tech: ["Next.js", "Tailwind CSS", "RAWG API"],
     year: "2026",
     image: "/game-portal.png",
@@ -24,7 +24,8 @@ const projectsData = [
     id: "〇二",
     name: "Nexus Ops",
     system: "Dev-Ops SaaS Platform",
-    description: "A SaaS platform that simplifies DevOps for small teams. It automates repetitive tasks such as code commits, issue tracking, and deployments.",
+    description:
+      "A modern JRPG style SaaS platform that automates DevOps workflows for agile teams, including commits, issue tracking, and deployments. Beyond automation, it features an educational core designed to streamline Git and GitHub onboarding for aspiring developers.",
     tech: ["Next.js", "Tailwind CSS", "PostgreSQL", "Vercel"],
     year: "2026",
     image: "/nexus-ops.png",
@@ -93,7 +94,7 @@ export default function Projects() {
                     src={project.image}
                     alt={project.name}
                     fill
-                    className="object-cover transition-all duration-1000 group-hover:scale-105 opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100"
+                    className="object-cover transition-all duration-1000 group-hover:scale-105 opacity-60 md:grayscale group-hover:grayscale-0 group-hover:opacity-100"
                   />
                 ) : (
                   <span className="font-serif text-stone-400 text-sm tracking-widest z-10 group-hover:text-stone-600 transition-colors duration-500">
