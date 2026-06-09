@@ -1,18 +1,18 @@
-import Expertise from './_components/Expertise';
-import Hero from './_components/Hero';
-import Project from './_components/Project';
-import Footer from './_components/Footer';
+import Expertise from "./components/Expertise";
+import Hero from "./components/Hero";
+import Project from "./components/Project";
+import Footer from "./components/Footer";
 
 export default function HomePage() {
-   return (
-      <div className="flex flex-col w-full relative">
-         <Hero />
+  return (
+    <div className="flex flex-col w-full relative">
+      <Hero />
 
-         <Expertise />
+      <Expertise />
 
-         <Project />
+      <Project />
 
-         <Footer />
-      </div>
-   );
+      <Footer />
+    </div>
+  );
 }
