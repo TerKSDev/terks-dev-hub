@@ -3,48 +3,21 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-// 新增引入 FiGithub 圖示
+import { project } from "@/lib/project";
 import { FiArrowUpRight, FiGithub } from "react-icons/fi";
-
-const projectsData = [
-  {
-    id: "〇一",
-    name: "Game Portal",
-    system: "Digital Distribution Platform",
-    description:
-      "A conceptual game storefront inspired by Steam. It reimagine complex game discovery through a clean, interactive Bento Grid UI. The goal is to explore how modern frontend technologies can enhance the traditional desktop application experience, making it more fluid and visually engaging for users.",
-    tech: ["Next.js", "Tailwind CSS", "RAWG API"],
-    year: "2026",
-    image: "/game-portal.png",
-    websiteUrl: "https://gamestore.quadrawebs.com",
-    githubUrl: "https://github.com/TerKSDev/game-portal",
-    openSource: true,
-  },
-  {
-    id: "〇二",
-    name: "Nexus Ops",
-    system: "Dev-Ops SaaS Platform",
-    description:
-      "A modern JRPG style SaaS platform that automates DevOps workflows for agile teams, including commits, issue tracking, and deployments. Beyond automation, it features an educational core designed to streamline Git and GitHub onboarding for aspiring developers.",
-    tech: ["Next.js", "Tailwind CSS", "PostgreSQL", "Vercel"],
-    year: "2026",
-    image: "/nexus-ops.png",
-    websiteUrl: "https://nexus-ops-roan.vercel.app",
-    githubUrl: "https://github.com/TerKSDev/nexus-ops",
-    openSource: true,
-  },
-];
 
 export default function Projects() {
   return (
     <section
-      id="project"
-      className="relative w-full px-8 md:px-24 lg:px-36 py-16 pb-36 overflow-hidden scroll-mt-17.25"
+      id="projects"
+      className="relative w-full px-6 md:px-24 lg:px-36 py-16 pb-36 overflow-hidden scroll-mt-17.25"
     >
+      {/* Decorative Lines */}
       <div className="absolute top-0 left-0 w-full flex justify-center">
         <div className="w-1/2 h-px bg-linear-to-r from-transparent via-stone-300 to-transparent"></div>
       </div>
 
+      {/* Vertical Text */}
       <div className="absolute left-4 md:left-12 top-1/2 [writing-mode:vertical-rl] text-stone-300 tracking-[0.5em] text-sm font-serif hidden md:block select-none">
         厳選された作品
       </div>
@@ -60,7 +33,7 @@ export default function Projects() {
         <div className="flex flex-col gap-4">
           <div className="flex items-baseline gap-6">
             <h2 className="text-4xl md:text-5xl text-stone-800 font-serif tracking-wide">
-              Selected Projects.
+              Projects.
             </h2>
             <div className="text-sm text-stone-400 font-serif tracking-widest">
               作品
@@ -74,11 +47,11 @@ export default function Projects() {
       </motion.div>
 
       {/* Projects List */}
-      <div className="flex flex-col gap-32 md:gap-52">
-        {projectsData.map((project, index) => (
+      <div className="flex flex-col gap-24 md:gap-48">
+        {project.map((data, index) => (
           <motion.div
             key={index}
-            className={`flex flex-col gap-20 md:gap-24 items-center ${
+            className={`flex flex-col gap-12 md:gap-24 items-center ${
               index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
             }`}
             initial={{ opacity: 0, y: 40 }}
@@ -89,12 +62,12 @@ export default function Projects() {
             {/* Visual / Image Column */}
             <div className="w-full md:w-1/2 relative group cursor-pointer">
               <div className="relative aspect-4/3 w-full border-[0.5px] border-stone-300 overflow-hidden bg-stone-100 flex items-center justify-center rounded-sm">
-                {project.image ? (
+                {data.image ? (
                   <Image
-                    src={project.image}
-                    alt={project.name}
+                    src={data.image}
+                    alt={data.name}
                     fill
-                    className="object-cover transition-all duration-1000 group-hover:scale-105 opacity-60 md:grayscale group-hover:grayscale-0 group-hover:opacity-100"
+                    className="object-cover transition-all duration-1000 group-hover:scale-105 md:opacity-60 md:grayscale group-hover:grayscale-0 group-hover:opacity-100"
                   />
                 ) : (
                   <span className="font-serif text-stone-400 text-sm tracking-widest z-10 group-hover:text-stone-600 transition-colors duration-500">
@@ -118,24 +91,24 @@ export default function Projects() {
 
             {/* Text Content Column */}
             <div className="w-full md:w-1/2 flex flex-col items-start text-start">
-              <span className="font-serif text-sm font-medium tracking-widest text-[#8B3A3A]/80 mb-6">
-                {project.id} — {project.year}
+              <span className="font-serif text-sm font-medium tracking-widest text-[#8B3A3A]/80 mb-4 md:mb-6">
+                {data.id} — {data.year}
               </span>
 
-              <div className="mb-8 flex flex-col gap-2">
+              <div className="mb-4 md:mb-8 flex flex-col gap-3">
                 <h3 className="text-3xl md:text-5xl font-serif text-stone-800 leading-none">
-                  {project.name}
+                  {data.name}
                 </h3>
                 <div className="text-stone-400 font-serif tracking-[0.3em] text-xs uppercase">
-                  {project.system}
+                  {data.system}
                 </div>
               </div>
-              <p className="text-stone-500 font-light text-base leading-loose max-w-md mb-10">
-                {project.description}
+              <p className="text-stone-500 font-light text-base leading-loose w-full md:max-w-xl mb-6 md:mb-10">
+                {data.description}
               </p>
 
-              <div className="flex flex-wrap gap-4 mb-12">
-                {project.tech.map((t, i) => (
+              <div className="flex flex-wrap gap-4 mb-8 md:mb-12">
+                {data.tech.map((t, i) => (
                   <span
                     key={i}
                     className="text-xs font-serif tracking-[0.2em] text-stone-400 uppercase border border-stone-200 px-4 py-2 rounded-sm hover:bg-stone-200/20 transition-colors duration-300 cursor-default"
@@ -148,7 +121,7 @@ export default function Projects() {
               <div className="flex items-center gap-8">
                 {/* View Project Button */}
                 <Link
-                  href={project.websiteUrl}
+                  href={data.websiteUrl}
                   className="group flex items-center gap-3 w-fit pb-2 border-b border-stone-300 hover:border-[#8B3A3A] transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
                 >
                   View Project
@@ -156,9 +129,9 @@ export default function Projects() {
                 </Link>
 
                 {/* Conditional Source Code Link */}
-                {project.openSource && (
+                {data.openSource && (
                   <Link
-                    href={project.githubUrl || "#"}
+                    href={data.githubUrl || "#"}
                     className="group flex items-center gap-3 w-fit pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-400 hover:text-stone-800 tracking-widest text-sm uppercase"
                   >
                     <FiGithub className="w-4 h-4 group-hover:text-stone-800 transition-colors duration-300" />

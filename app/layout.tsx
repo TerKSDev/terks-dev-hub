@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Header from "./components/Header";
+import Header from "../components/Header";
 import { Playfair_Display, Inter, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 

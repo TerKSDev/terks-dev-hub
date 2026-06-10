@@ -11,13 +11,9 @@ export default function Header() {
       { name: 'Contact', href: '#contact' },
    ];
 
-   const scrollTo = () => {
-      window.scrollTo({ top: 81.6, behavior: 'smooth' });
-   };
-
    return (
       <motion.header
-         className="w-full border-b border-stone-200 py-4 flex justify-between items-center px-8 md:px-24 lg:px-36 sticky top-0 bg-main/80 backdrop-blur-md z-50 transition-all duration-300 scroll-mt-16"
+         className="w-full border-b border-stone-200 py-4 flex justify-between items-center px-6 md:px-24 lg:px-36 sticky top-0 bg-main/80 backdrop-blur-md z-50 transition-all duration-300 scroll-mt-16"
          initial={{ opacity: 0, y: -16 }}
          animate={{ opacity: 1, y: 0 }}
          transition={{ duration: 0.5, ease: 'easeOut' }}
