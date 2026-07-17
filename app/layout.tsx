@@ -64,7 +64,7 @@ export default function RootLayout({
             <filter id="noiseFilter">
               <feTurbulence
                 type="fractalNoise"
-                baseFrequency="0.85" // 稍微調細一點點，讓顆粒感更精緻
+                baseFrequency="0.85"
                 numOctaves="3"
                 stitchTiles="stitch"
               />

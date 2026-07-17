@@ -1,4 +1,4 @@
-"use client"; // 因為我們有用到 window.scrollTo，所以需要加上這行
+"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
