@@ -59,9 +59,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${playfairDisplay.variable} ${inter.variable} ${notoSerifJP.variable} antialiased text-stone-800 selection:bg-[#8B3A3A]/20 selection:text-[#8B3A3A]`}
+        className={`${playfairDisplay.variable} ${inter.variable} ${notoSerifJP.variable} antialiased text-stone-800 selection:bg-emphasize/20 selection:text-emphasize`}
       >
-        <div className="pointer-events-none fixed inset-0 z-100 h-full w-full opacity-[0.035] mix-blend-multiply">
+        <div className="pointer-events-none fixed inset-0 z-100 h-full w-full opacity-[0.035] dark:opacity-[0.02] mix-blend-multiply">
           <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
             <filter id="noiseFilter">
               <feTurbulence

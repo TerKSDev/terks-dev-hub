@@ -23,7 +23,7 @@ export default function Header() {
       <div className="w-full border-b border-stone-200 py-4 px-5 md:px-24 lg:px-36 bg-main/90 backdrop-blur-md relative z-20">
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center gap-4 group cursor-default w-fit">
-            <div className="font-serif font-light flex h-9 w-9 items-center justify-center border-[1.5px] border-[#8B3A3A] text-[#8B3A3A] rounded-sm group-hover:bg-[#8B3A3A] group-hover:text-main transition-colors duration-500">
+            <div className="font-serif font-light flex h-9 w-9 items-center justify-center border-[1.5px] border-emphasize text-emphasize rounded-sm group-hover:bg-emphasize group-hover:text-main transition-colors duration-500">
               創
             </div>
 
@@ -52,7 +52,7 @@ export default function Header() {
 
                   <div
                     className={`absolute bottom-0 left-0 w-full h-px bg-stone-800 origin-right scale-x-0 transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:origin-left group-hover:scale-x-100 ${
-                      item.name === "Contact" ? "bg-[#8B3A3A]" : ""
+                      item.name === "Contact" ? "bg-emphasize" : ""
                     }`}
                   ></div>
                 </li>
@@ -63,6 +63,7 @@ export default function Header() {
           <button
             className="lg:hidden flex"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Menu"
           >
             {!isMenuOpen ? (
               <div className="flex flex-col gap-1.5 cursor-pointer group rounded-md outline-none mr-1">
@@ -89,13 +90,13 @@ export default function Header() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="lg:hidden absolute top-full left-0 right-0 w-full bg-main border-b border-stone-200 shadow-lg z-10"
           >
-            <nav className="font-serif text-xs uppercase tracking-[0.2em] text-stone-500 items-center flex flex-col gap-6 shadow-inner py-6">
+            <nav className="font-serif text-xs uppercase tracking-[0.2em]  items-center flex flex-col gap-6 shadow-inner py-6">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}
                   onClick={() => setIsMenuOpen(false)}
                   href={item.href}
-                  className={`transition-colors duration-500 text-center flex justify-center group-hover:text-stone-900 w-full`}
+                  className={`transition-colors duration-500 text-center text-stone-500 hover:text-stone-700 flex justify-center group-hover:text-stone-900 w-full`}
                 >
                   {item.name}
                 </Link>

@@ -11,16 +11,16 @@ export default function Footer() {
         © {new Date().getFullYear()} TerKS.Dev
       </div>
 
-      <div className="font-serif font-light flex h-9 w-9 items-center justify-center border-[1.5px] border-[#8B3A3A] text-[#8B3A3A] rounded-sm hover:bg-[#8B3A3A] hover:text-main transition-colors duration-500 cursor-default">
+      <div className="font-serif font-light flex h-9 w-9 items-center justify-center border-[1.5px] border-emphasize text-emphasize rounded-sm hover:bg-emphasize hover:text-main transition-colors duration-500 cursor-default">
         創
       </div>
 
       <button
         onClick={scrollToTop}
-        className="group flex items-center gap-2 text-xs text-stone-400 font-serif tracking-[0.2em] uppercase hover:text-[#8B3A3A] transition-colors duration-300"
+        className="group flex items-center gap-2 text-xs text-stone-400 font-serif tracking-[0.2em] uppercase hover:text-emphasize transition-colors duration-300"
       >
         Back to Top
-        <span className="block transform group-hover:-translate-y-1 group-hover:text-[#8B3A3A] transition-all duration-300">
+        <span className="block transform group-hover:-translate-y-1 group-hover:text-emphasize transition-all duration-300">
           ↑
         </span>
       </button>

@@ -91,22 +91,20 @@ export default function Hero() {
         >
           <Link
             href="#projects"
-            className="group flex items-center gap-3 w-fit  pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
+            className="group flex items-center gap-3 w-fit pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
           >
             Explore My Projects
             <FiArrowDown className="w-4 h-4 transform group-hover:translate-y-1 transition-transform duration-300" />
           </Link>
-          <div className="relative">
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex cursor-pointer items-center gap-3 w-fit  pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
-            >
-              My Resume
-              <FiDownload className="w-4 h-4 transform group-hover:translate-y-1 transition-transform duration-300" />
-            </a>
-          </div>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex cursor-pointer items-center gap-3 w-fit pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
+          >
+            My Resume
+            <FiDownload className="w-4 h-4 transform group-hover:translate-y-1 transition-transform duration-300" />
+          </a>
         </motion.div>
       </motion.div>
 
@@ -125,7 +123,7 @@ export default function Hero() {
           創
         </div>
 
-        <div className="absolute top-1/4 right-1/4 lg:right-1/4 w-10 h-10 border lg:border-[#8B3A3A] lg:text-[#8B3A3A] border-[#8B3A3A]/25 text-[#8B3A3A]/25 flex items-center justify-center text-lg font-serif rounded-sm rotate-6 opacity-80 select-none cursor-default">
+        <div className="absolute top-1/4 right-1/4 lg:right-1/4 w-10 h-10 border lg:border-emphasize lg:text-emphasize border-emphasize/25 text-emphasize/25 flex items-center justify-center text-lg font-serif rounded-sm rotate-6 opacity-80 select-none cursor-default">
           作
         </div>
       </motion.div>

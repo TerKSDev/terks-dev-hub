@@ -50,7 +50,7 @@ export default function Expertise() {
           </div>
 
           <div className="flex">
-            <div className="w-8 h-px bg-[#8B3A3A]/70"></div>
+            <div className="w-8 h-px bg-emphasize/70"></div>
             <div className="w-16 h-px bg-stone-300"></div>
           </div>
         </div>
@@ -73,10 +73,10 @@ export default function Expertise() {
             }}
           >
             <div className="flex items-center gap-3 mb-8">
-              <span className="font-serif text-sm font-medium tracking-widest text-[#8B3A3A]/80">
+              <span className="font-serif text-sm font-medium tracking-widest text-emphasize/80">
                 〇{kanjiNumbers[index]}
               </span>
-              <div className="h-px w-6 bg-stone-300 group-hover:w-12 group-hover:bg-[#8B3A3A]/50 transition-all duration-500"></div>
+              <div className="h-px w-6 bg-stone-300 group-hover:w-12 group-hover:bg-emphasize/50 transition-all duration-500"></div>
             </div>
 
             <h3 className="text-2xl md:text-3xl tracking-wide font-serif text-stone-800 mb-12 leading-snug">

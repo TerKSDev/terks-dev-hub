@@ -40,7 +40,7 @@ export default function Projects() {
             </div>
           </div>
           <div className="flex">
-            <div className="w-8 h-px bg-[#8B3A3A]/70"></div>
+            <div className="w-8 h-px bg-emphasize/70"></div>
             <div className="w-16 h-px bg-stone-300"></div>
           </div>
         </div>
@@ -66,6 +66,8 @@ export default function Projects() {
                   <Image
                     src={data.image}
                     alt={data.name}
+                    sizes="42rem"
+                    priority
                     fill
                     className="object-cover transition-all duration-1000 group-hover:scale-105 md:opacity-60 md:grayscale group-hover:grayscale-0 group-hover:opacity-100"
                   />
@@ -91,7 +93,7 @@ export default function Projects() {
 
             {/* Text Content Column */}
             <div className="w-full md:w-1/2 flex flex-col items-start text-start">
-              <span className="font-serif text-sm font-medium tracking-widest text-[#8B3A3A]/80 mb-4 md:mb-6">
+              <span className="font-serif text-sm font-medium tracking-widest text-emphasize/80 mb-4 md:mb-6">
                 {data.id} — {data.year}
               </span>
 
@@ -122,16 +124,20 @@ export default function Projects() {
                 {/* View Project Button */}
                 <Link
                   href={data.websiteUrl}
-                  className="group flex items-center gap-3 w-fit pb-2 border-b border-stone-300 hover:border-[#8B3A3A] transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 w-fit pb-2 border-b border-stone-300 hover:border-emphasize transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
                 >
                   View Project
-                  <FiArrowUpRight className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#8B3A3A] transition-all duration-300" />
+                  <FiArrowUpRight className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-emphasize transition-all duration-300" />
                 </Link>
 
                 {/* Conditional Source Code Link */}
                 {data.openSource && (
                   <Link
-                    href={data.githubUrl || "#"}
+                    href={data.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center gap-3 w-fit pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-400 hover:text-stone-800 tracking-widest text-sm uppercase"
                   >
                     <FiGithub className="w-4 h-4 group-hover:text-stone-800 transition-colors duration-300" />

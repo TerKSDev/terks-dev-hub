@@ -47,7 +47,7 @@ export default function CTA() {
               {"Let's Connect."}
             </h2>
             <div className="flex items-center gap-4">
-              <div className="w-8 h-px bg-[#8B3A3A]/70"></div>
+              <div className="w-8 h-px bg-emphasize/70"></div>
               <span className="text-sm text-stone-400 font-serif tracking-widest">
                 一緒に何かを創りましょう
               </span>
@@ -57,21 +57,21 @@ export default function CTA() {
           <div className="flex flex-col gap-4">
             <Link
               href="mailto:huoyan0928@gmail.com"
-              className="group flex items-center gap-3.5 w-fit mt-4 pb-2 border-b border-stone-300 hover:border-[#8B3A3A] transition-colors duration-500 text-stone-700 tracking-widest text-sm md:text-base uppercase"
+              className="group flex items-center gap-3.5 w-fit mt-4 pb-2 border-b border-stone-300 hover:border-emphasize transition-colors duration-500 text-stone-700 tracking-widest text-sm md:text-base uppercase"
             >
-              <FiMail className="w-4 h-4 text-stone-400 group-hover:text-[#8B3A3A] transition-colors duration-300" />
+              <FiMail className="w-4 h-4 text-stone-400 group-hover:text-emphasize transition-colors duration-300" />
               huoyan0928@gmail.com
-              <FiArrowUpRight className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#8B3A3A] transition-all duration-300" />
+              <FiArrowUpRight className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-emphasize transition-all duration-300" />
             </Link>
             <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-3.5 w-fit mt-4 pb-2 border-b border-stone-300 hover:border-[#8B3A3A] transition-colors duration-500 text-stone-700 tracking-widest text-sm md:text-base uppercase"
+              className="group flex items-center gap-3.5 w-fit mt-4 pb-2 border-b border-stone-300 hover:border-emphasize transition-colors duration-500 text-stone-700 tracking-widest text-sm md:text-base uppercase"
             >
-              <FiFileText className="w-4 h-4 text-stone-400 group-hover:text-[#8B3A3A] transition-colors duration-300" />
+              <FiFileText className="w-4 h-4 text-stone-400 group-hover:text-emphasize transition-colors duration-300" />
               My Resume
-              <FiDownload className="w-4 h-4 transform group-hover:translate-y-0.5 group-hover:text-[#8B3A3A] transition-all duration-300" />
+              <FiDownload className="w-4 h-4 transform group-hover:translate-y-0.5 group-hover:text-emphasize transition-all duration-300" />
             </a>
           </div>
         </div>
