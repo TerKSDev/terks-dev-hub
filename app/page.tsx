@@ -1,7 +1,8 @@
-import Expertise from "../components/Expertise";
-import Hero from "../components/Hero";
-import Project from "../components/Project";
-import Footer from "../components/Footer";
+import Expertise from "@/components/Expertise";
+import Hero from "@/components/Hero";
+import Project from "@/components/Project";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,8 @@ export default function HomePage() {
       <Expertise />
 
       <Project />
+
+      <CTA />
 
       <Footer />
     </div>

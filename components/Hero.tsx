@@ -1,7 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
-import { FiArrowDown } from "react-icons/fi";
+import { FiArrowDown, FiDownload } from "react-icons/fi";
 import Link from "next/link";
 
 export default function Hero() {
@@ -52,7 +51,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-nowrap font-serif text-stone-800 leading-snug tracking-wide"
+          className="text-3xl sm:text-4xl text-justify md:text-5xl lg:text-6xl text-nowrap font-serif text-stone-800 leading-snug tracking-wide"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: {
@@ -66,7 +65,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-stone-500 font-light text-sm sm:text-base md:text-lg lg:text-xl leading-loose w-full lg:max-w-lg"
+          className="text-stone-500 text-justify font-light text-sm sm:text-base md:text-lg lg:text-xl leading-loose w-full lg:max-w-lg"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: {
@@ -76,9 +75,7 @@ export default function Hero() {
             },
           }}
         >
-          I build elegant and efficient web applications that solve real-world
-          problems, blending minimalist design with robust server-side
-          architecture.
+          {`I'm an IT graduate based in Malaysia. I focus on building elegant and efficient web applications that solve real-world problems, blending minimalist design with robust server-side architecture.`}
         </motion.p>
 
         <motion.div
@@ -90,14 +87,26 @@ export default function Hero() {
               transition: { duration: 0.7, ease: "easeOut" },
             },
           }}
+          className="flex flex-col sm:flex-row sm:items-center gap-6 lg:gap-12 mt-4"
         >
           <Link
             href="#projects"
-            className="group flex items-center gap-3 w-fit mt-4 pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
+            className="group flex items-center gap-3 w-fit  pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
           >
             Explore My Projects
             <FiArrowDown className="w-4 h-4 transform group-hover:translate-y-1 transition-transform duration-300" />
           </Link>
+          <div className="relative">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex cursor-pointer items-center gap-3 w-fit  pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
+            >
+              My Resume
+              <FiDownload className="w-4 h-4 transform group-hover:translate-y-1 transition-transform duration-300" />
+            </a>
+          </div>
         </motion.div>
       </motion.div>
 

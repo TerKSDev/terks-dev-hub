@@ -3,7 +3,6 @@ import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { expertise } from "@/lib/expertise";
 
-
 const SkillRating = ({ level }: { level: number }) => (
   <div className="flex items-center gap-2">
     {[...Array(5)].map((_, i) => (
@@ -61,7 +60,7 @@ export default function Expertise() {
         {expertise.map((data, index) => (
           <motion.div
             key={index}
-            className={`flex flex-col items-start px-2 py-8 md:px-12 transition-colors duration-700 hover:bg-stone-200/20 group
+            className={`flex flex-col items-start justify-center px-2 py-8 md:px-12 transition-colors duration-700 hover:bg-stone-200/20 group
                      ${index !== 2 ? "md:border-r border-b md:border-b-0 border-stone-200" : "md:p-0 pb-12"}
                   `}
             initial={{ opacity: 0, y: 32 }}
@@ -89,7 +88,7 @@ export default function Expertise() {
               ))}
             </h3>
 
-            <div className="flex flex-col gap-6 w-full mt-auto">
+            <div className="flex flex-col gap-6 w-full">
               {data.skills.map((skill, sIndex) => (
                 <div
                   key={sIndex}
