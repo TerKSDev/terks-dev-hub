@@ -1,6 +1,5 @@
 "use client";
-
-import React from "react";
+import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { expertise } from "@/lib/expertise";
 
@@ -43,9 +42,9 @@ export default function Expertise() {
       >
         <div className="flex flex-col gap-4">
           <div className="flex items-baseline gap-6">
-            <h1 className="text-4xl md:text-5xl text-stone-800 font-serif tracking-wide">
+            <h2 className="text-4xl md:text-5xl text-stone-800 font-serif tracking-wide">
               Expertise.
-            </h1>
+            </h2>
             <div className="text-sm text-stone-400 font-serif tracking-widest">
               スキル
             </div>
@@ -63,7 +62,7 @@ export default function Expertise() {
           <motion.div
             key={index}
             className={`flex flex-col items-start px-2 py-8 md:px-12 transition-colors duration-700 hover:bg-stone-200/20 group
-                     ${index !== 2 ? "md:border-r  border-b md:border-b-0 border-stone-200" : "max-md:pb-12"}
+                     ${index !== 2 ? "md:border-r border-b md:border-b-0 border-stone-200" : "md:p-0 pb-12"}
                   `}
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -83,10 +82,10 @@ export default function Expertise() {
 
             <h3 className="text-2xl md:text-3xl tracking-wide font-serif text-stone-800 mb-12 leading-snug">
               {data.title.split(" ").map((word, i) => (
-                <React.Fragment key={i}>
+                <Fragment key={i}>
                   {word}
                   {i === 0 && <br />}
-                </React.Fragment>
+                </Fragment>
               ))}
             </h3>
 

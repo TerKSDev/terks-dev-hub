@@ -32,10 +32,12 @@ export const metadata: Metadata = {
     "Full-Stack Developer",
     "Web Developer",
     "Japanese-Style Portfolio",
+    "Ter Kean Sen",
+    "Developer",
   ],
   openGraph: {
     type: "website",
-    locale: "us-en",
+    locale: "en_US",
     url: "https://terks-dev-hub.vercel.app",
     siteName: "TerKS.Dev.Hub",
     images: [
@@ -59,7 +61,7 @@ export default function RootLayout({
       <body
         className={`${playfairDisplay.variable} ${inter.variable} ${notoSerifJP.variable} antialiased text-stone-800 selection:bg-[#8B3A3A]/20 selection:text-[#8B3A3A]`}
       >
-        <div className="pointer-events-none fixed inset-0 z-9999 h-full w-full opacity-[0.035] mix-blend-multiply">
+        <div className="pointer-events-none fixed inset-0 z-100 h-full w-full opacity-[0.035] mix-blend-multiply">
           <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
             <filter id="noiseFilter">
               <feTurbulence

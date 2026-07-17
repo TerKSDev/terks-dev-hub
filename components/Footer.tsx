@@ -8,7 +8,7 @@ const socialLinks = [
   { name: "GitHub", url: "https://github.com/TerKSDev", icon: FiGithub },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/kean-sen-ter-6a3189392",
     icon: FiLinkedin,
   },
 ];
@@ -31,7 +31,6 @@ export default function Footer() {
         お問い合わせ
       </div>
 
-      {/* 主要內容區塊 */}
       <motion.div
         className="flex flex-col md:flex-row justify-between items-start md:items-end gap-16 md:gap-0 z-10 w-full mt-10"
         initial={{ opacity: 0, y: 32 }}
@@ -39,8 +38,7 @@ export default function Footer() {
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        {/* 左側：大標題與信箱聯絡 */}
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-4">
             <h2 className="text-4xl md:text-6xl font-serif text-stone-800 tracking-wide leading-none">
               {"Let's Connect."}
@@ -55,7 +53,7 @@ export default function Footer() {
 
           <Link
             href="mailto:huoyan0928@gmail.com"
-            className="group flex items-center gap-4 w-fit mt-4 pb-2 border-b border-stone-300 hover:border-[#8B3A3A] transition-colors duration-500 text-stone-700 tracking-widest text-sm md:text-base uppercase"
+            className="group flex items-center gap-3.5 w-fit mt-4 pb-2 border-b border-stone-300 hover:border-[#8B3A3A] transition-colors duration-500 text-stone-700 tracking-widest text-sm md:text-base uppercase"
           >
             <FiMail className="w-4 h-4 text-stone-400 group-hover:text-[#8B3A3A] transition-colors duration-300" />
             huoyan0928@gmail.com
@@ -63,7 +61,7 @@ export default function Footer() {
           </Link>
         </div>
 
-        <div className="flex flex-col items-start md:items-end gap-8 mb-12">
+        <div className="flex flex-col items-start md:items-end gap-6 mb-12">
           <span className="text-xs text-stone-400 font-serif tracking-[0.3em] uppercase">
             Socials
           </span>
@@ -85,7 +83,7 @@ export default function Footer() {
         </div>
       </motion.div>
 
-      <div className="sticky sm:absolute bottom-0 left-0 w-full flex flex-col-reverse md:flex-row justify-between items-center py-8 px-8 md:px-24 lg:px-36 border-t border-stone-200 gap-8 md:gap-0 z-10 max-h-fit">
+      <div className="mt-auto sticky sm:absolute bottom-0 left-0 w-full flex flex-col-reverse md:flex-row justify-between items-center py-8 px-8 md:px-24 lg:px-36 border-t border-stone-200 gap-8 md:gap-0 z-10 max-h-fit">
         <div className="text-xs text-stone-400 font-serif tracking-[0.2em] uppercase">
           © {new Date().getFullYear()} TerKS.Dev
         </div>

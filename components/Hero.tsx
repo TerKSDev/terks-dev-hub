@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="relative w-full grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-24 lg:px-36 py-16 min-h-[calc(100vh-68.8px)] items-center overflow-hidden scroll-mt-17.25"
+      className="relative w-full grid grid-cols-1 xl:grid-cols-2 gap-12 px-6 md:px-24 lg:px-36 py-16 min-h-[calc(100vh-68.8px)] items-center overflow-hidden scroll-mt-17.25"
     >
       {/* Decorative Lines */}
       <div className="w-full border-stone-200 border-top h-px absolute top-0 left-0"></div>
@@ -19,7 +19,7 @@ export default function Hero() {
       </div>
 
       {/* Vertical Text */}
-      <div className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 [writing-mode:vertical-rl] text-stone-300 tracking-[0.5em] text-sm font-serif hidden md:block select-none">
+      <div className="absolute sm:left-5 lg:left-12 top-1/2 -translate-y-1/2 [writing-mode:vertical-rl] text-stone-300 tracking-[0.5em] text-sm font-serif hidden md:block select-none">
         シンプルさと機能性の融合
       </div>
 
@@ -52,7 +52,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1
-          className="text-5xl md:text-6xl font-serif text-stone-800 leading-[1.2] tracking-wide"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-nowrap font-serif text-stone-800 leading-snug tracking-wide"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: {
@@ -62,11 +62,11 @@ export default function Hero() {
             },
           }}
         >
-          Next.js <br /> Full-Stack <br /> Developer.
+          Next.js Full-Stack <br /> Developer.
         </motion.h1>
 
         <motion.p
-          className="text-stone-500 font-light text-base leading-loose max-w-md"
+          className="text-stone-500 font-light text-sm sm:text-base md:text-lg lg:text-xl leading-loose w-full lg:max-w-lg"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: {
@@ -92,7 +92,7 @@ export default function Hero() {
           }}
         >
           <Link
-            href="#project"
+            href="#projects"
             className="group flex items-center gap-3 w-fit mt-4 pb-2 border-b border-stone-300 hover:border-stone-800 transition-colors duration-500 text-stone-700 tracking-widest text-sm uppercase"
           >
             Explore My Projects
@@ -103,20 +103,20 @@ export default function Hero() {
 
       {/* Right Column - Decorative Visuals */}
       <motion.div
-        className="max-md:absolute md:relative flex items-center justify-center w-full h-100 md:h-full"
+        className="absolute xl:relative flex items-center justify-center w-full h-100 lg:h-full"
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
       >
         <div className="absolute w-80 h-80 bg-stone-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute w-[20rem] h-80 md:w-md md:h-112 border-[0.5px] border-stone-300/50 md:border-stone-300 rounded-full"></div>
-        <div className="absolute w-[20rem] h-80 md:w-md md:h-112 border-[0.5px] border-stone-200/50 md:border-stone-200 rounded-full translate-x-6 translate-y-6"></div>
+        <div className="absolute w-[20rem] h-80 md:w-md md:h-112 border-[0.5px] border-stone-300/50 lg:border-stone-300 rounded-full"></div>
+        <div className="absolute w-[20rem] h-80 md:w-md md:h-112 border-[0.5px] border-stone-200/50 lg:border-stone-200 rounded-full translate-x-6 translate-y-6"></div>
 
-        <div className="text-[8rem] md:text-[12rem] text-stone-500/3 md:text-stone-800/5 font-serif font-light z-0 select-none">
+        <div className="text-[8rem] md:text-[12rem] text-stone-500/3 lg:text-stone-800/5 font-serif font-light z-0 select-none">
           創
         </div>
 
-        <div className="absolute top-1/4 right-1/4 md:right-1/4 w-10 h-10 border md:border-[#8B3A3A] md:text-[#8B3A3A] border-[#8B3A3A]/25 text-[#8B3A3A]/25 flex items-center justify-center text-lg font-serif rounded-sm rotate-6 opacity-80 select-none cursor-default">
+        <div className="absolute top-1/4 right-1/4 lg:right-1/4 w-10 h-10 border lg:border-[#8B3A3A] lg:text-[#8B3A3A] border-[#8B3A3A]/25 text-[#8B3A3A]/25 flex items-center justify-center text-lg font-serif rounded-sm rotate-6 opacity-80 select-none cursor-default">
           作
         </div>
       </motion.div>
